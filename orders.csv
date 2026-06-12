@@ -1,0 +1,6 @@
+OrderID,CustomerID,ProductID,Quantity,Discount,Region,OrderDate
+1,109,29,3,0.17,North America,2023-01-22
+2,494,70,6,0.16,Oceania,2024-11-20
+3,36,153,9,0.05,Middle East,2024-07-13
+4,232,95,3,0.21,Middle East,2024-09-20
+5,229,22,5,0.21,North America,2023-11-25
