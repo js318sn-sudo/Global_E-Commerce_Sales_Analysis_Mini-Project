@@ -1,0 +1,6 @@
+CustomerID,CustomerName,Age,Gender,Country,RegistrationDate
+1,Customer_1,56,Male,Singapore,2024-03-13
+2,Customer_2,46,Male,Germany,2022-05-11
+3,Customer_3,32,Male,Japan,2023-05-13
+4,Customer_4,60,Male,USA,2022-08-17
+5,Customer_5,25,Male,UAE,2022-04-18
