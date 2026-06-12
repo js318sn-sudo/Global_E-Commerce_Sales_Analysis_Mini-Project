@@ -101,7 +101,7 @@ Created using Power BI:
 ---
 
 ## Final Deliverables
-- Mini_Project.ipynb
+- Mini-Project.ipynb
 - Power BI Dashboard (Dashboard.pbix)
 - README.md
 
