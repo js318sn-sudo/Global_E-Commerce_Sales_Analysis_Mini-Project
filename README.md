@@ -1,7 +1,7 @@
 # E-Commerce Sales Analysis and Business Intelligence Dashboard
 
 ## Project Overview
-This project is a complete end-to-end data analytics and machine learning solution for an e-commerce business. It includes data generation, data cleaning, exploratory data analysis, feature engineering, visualization, business intelligence dashboard, and predictive modeling.
+This project is a complete end-to-end data analytics and machine learning solution for an e-commerce business. It includes data generation, data cleaning, exploratory data analysis, feature creation, visualization, business intelligence dashboard, and predictive modeling.
 
 ---
 
@@ -104,6 +104,8 @@ Created using Power BI:
 - Mini-Project.ipynb
 - Power BI Dashboard (Dashboard.pbix)
 - README.md
+- E_Commerce_Sales_Analysis_Presentation.pptx
+- E-Commerce_Sales_Analysis_Report.pdf
 
 ---
 
