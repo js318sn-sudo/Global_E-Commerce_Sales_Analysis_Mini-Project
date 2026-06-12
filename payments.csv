@@ -1,0 +1,6 @@
+PaymentID,OrderID,PaymentMethod,PaymentStatus,AmountPaid
+1,1,Credit Card,Pending,3768
+2,2,PayPal,Completed,1674
+3,3,Net Banking,Refunded,1856
+4,4,Debit Card,Refunded,4408
+5,5,PayPal,Completed,1504
