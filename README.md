@@ -104,8 +104,6 @@ Created using Power BI:
 - Mini_Project.ipynb
 - Power BI Dashboard (Dashboard.pbix)
 - README.md
-- Project Report PDF
-- Presentation PPT
 
 ---
 
