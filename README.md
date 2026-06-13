@@ -104,9 +104,7 @@ Created using Power BI:
 - Mini-Project.ipynb
 - Power BI Dashboard (Dashboard.pbix)
 - README.md
-- E-Commerce_Sales_Business_Intelligence_Presentation.pptx
-- E-Commerce_Sales_Business_Intelligence_Report.pdf
-
+  
 ---
 
 ## Conclusion
