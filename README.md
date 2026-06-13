@@ -120,8 +120,13 @@ Created using Power BI:
 
 ## Final Deliverables
 - Mini-Project.ipynb
-- Power BI Dashboard (Dashboard.pbix)
+- Dashboard.pbix
 - README.md
+- customers.csv
+- products.csv
+- orders.csv
+- payments.csv
+- final_merged_dataset.csv
   
 ---
 
