@@ -6,31 +6,41 @@ This project is a complete end-to-end data analytics and machine learning soluti
 ---
 
 ## Problem Statement
-The rapid growth of e-commerce businesses generates large volumes of sales, customer, product, and payment data. Analyzing this data is essential for understanding customer purchasing behavior, identifying top-performing products, tracking sales trends, evaluating profitability, and improving business decision-making. The objective of this project is to perform a comprehensive analysis of e-commerce sales data using Python, Pandas, data visualization, statistical techniques, and machine learning to generate meaningful business insights and support data-driven decisions.
+
+The rapid growth of e-commerce businesses generates large volumes of sales, customer, product, and payment data. Analyzing this data is essential for understanding customer purchasing behavior, identifying top-performing products, tracking sales trends, evaluating profitability, and improving business decision-making. This project aims to perform a comprehensive analysis of e-commerce sales data using Python, Pandas, SQL-style analytical operations, data visualization, statistical techniques, and machine learning. The project focuses on extracting meaningful insights from business data, identifying sales patterns, evaluating customer and product performance, and supporting data-driven decision-making through analytical reporting and dashboard development.
+
+### Objectives
+
+- Customer Behavior Analysis
+- Product Performance Analysis
+- Sales Trend Analysis
+- Profitability Analysis
+- Regional Performance Analysis
+- Payment Analysis
+- SQL-Style Business Reporting and Analytical Operations
+- Sales Prediction using Machine Learning
+
+---
 
 ## Dataset Selection
-For this project, a custom E-Commerce Sales dataset was created to simulate real-world online business operations. The dataset consists of four interconnected tables: Customers, Products, Orders, and Payments. These datasets contain information related to customer details, product information, order transactions, sales amounts, discounts, profits, payment methods, and payment status. The datasets were merged and analyzed to study sales performance, customer behavior, product trends, revenue generation, profitability, and business growth patterns. This structured dataset provides a suitable foundation for data cleaning, exploratory data analysis (EDA), statistical analysis, feature engineering, visualization, and machine learning tasks.
+
+For this project, a custom E-Commerce Sales dataset was created to simulate real-world online business operations. The dataset consists of four interconnected tables: Customers, Products, Orders, and Payments. These datasets contain information related to customer details, product information, order transactions, sales amounts, discounts, profits, payment methods, and payment status.
+
+The data from multiple tables was integrated and analyzed using Pandas operations such as filtering, grouping, aggregation, joins, sorting, and business reporting. The combined dataset was used to study sales performance, customer behavior, product trends, revenue generation, profitability, and business growth patterns.
+
+This dataset provides a strong foundation for data cleaning, exploratory data analysis (EDA), feature engineering, statistical analysis, data visualization, machine learning, and business intelligence reporting.
 
 ---
 
-## Problem Statement
-To analyze e-commerce sales data and extract meaningful insights such as:
-- Customer behavior
-- Product performance
-- Sales trends
-- Profitability
-- Regional performance
-- Payment analysis
-- Sales prediction using Machine Learning
+### Datasets Used
 
----
+- customers.csv – Customer information
+- products.csv – Product details and pricing information
+- orders.csv – Order and sales transaction records
+- payments.csv – Payment methods and payment status details
+- final_merged_dataset.csv – Integrated dataset created by merging all datasets for analysis
 
-## Datasets Used
-- customers.csv
-- products.csv
-- orders.csv
-- payments.csv
-- final_merged_dataset.csv
+These datasets were analyzed using Python, Pandas, statistical techniques, data visualization, machine learning, and business intelligence methods to generate meaningful insights and support data-driven decision-making.
 
 ---
 
