@@ -6,6 +6,14 @@ This project is a complete end-to-end data analytics and machine learning soluti
 ---
 
 ## Problem Statement
+The rapid growth of e-commerce businesses generates large volumes of sales, customer, product, and payment data. Analyzing this data is essential for understanding customer purchasing behavior, identifying top-performing products, tracking sales trends, evaluating profitability, and improving business decision-making. The objective of this project is to perform a comprehensive analysis of e-commerce sales data using Python, Pandas, data visualization, statistical techniques, and machine learning to generate meaningful business insights and support data-driven decisions.
+
+## Dataset Selection
+For this project, a custom E-Commerce Sales dataset was created to simulate real-world online business operations. The dataset consists of four interconnected tables: Customers, Products, Orders, and Payments. These datasets contain information related to customer details, product information, order transactions, sales amounts, discounts, profits, payment methods, and payment status. The datasets were merged and analyzed to study sales performance, customer behavior, product trends, revenue generation, profitability, and business growth patterns. This structured dataset provides a suitable foundation for data cleaning, exploratory data analysis (EDA), statistical analysis, feature engineering, visualization, and machine learning tasks.
+
+---
+
+## Problem Statement
 To analyze e-commerce sales data and extract meaningful insights such as:
 - Customer behavior
 - Product performance
