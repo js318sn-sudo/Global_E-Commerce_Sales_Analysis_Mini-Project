@@ -1,6 +1,0 @@
-OrderID,CustomerID,ProductID,Quantity,Discount,Region,OrderDate,CustomerName,Age,Gender,Country,RegistrationDate,ProductName,Category,Price,CostPrice,PaymentID,PaymentMethod,PaymentStatus,AmountPaid,TotalSales,DiscountAmount,FinalAmount,Profit,RevenueCategory,RegionCode,ProfitMargin
-1,109,29,3,0.17,North America,2023-01-22,Customer_109,22,Male,USA,2023-12-23,Product_29,Beauty,380,328,1,Credit Card,Pending,3768,1140,193.8,946.2,-37.8,Low,3,-3.99
-2,494,70,6,0.16,Oceania,2024-11-20,Customer_494,49,Female,USA,2022-11-05,Product_70,Beauty,847,16,2,PayPal,Completed,1674,5082,813.12,4268.88,4172.88,High,5,97.75
-3,36,153,9,0.05,Middle East,2024-07-13,Customer_36,61,Male,France,2024-09-02,Product_153,Books,285,616,3,Net Banking,Refunded,1856,2565,128.25,2436.75,-3107.25,Medium,4,-127.52
-4,232,95,3,0.21,Middle East,2024-09-20,Customer_232,50,Male,Japan,2024-04-29,Product_95,Toys,614,498,4,Debit Card,Refunded,4408,1842,386.82,1455.18,-38.82,Medium,4,-2.67
-5,229,22,5,0.21,North America,2023
