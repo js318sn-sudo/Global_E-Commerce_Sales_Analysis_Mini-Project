@@ -38,7 +38,6 @@ This dataset provides a strong foundation for data cleaning, exploratory data an
 - products.csv – Product details and pricing information
 - orders.csv – Order and sales transaction records
 - payments.csv – Payment methods and payment status details
-- final_merged_dataset.csv – Integrated dataset created by merging all datasets for analysis
 
 These datasets were analyzed using Python, Pandas, statistical techniques, data visualization, machine learning, and business intelligence methods to generate meaningful insights and support data-driven decision-making.
 
