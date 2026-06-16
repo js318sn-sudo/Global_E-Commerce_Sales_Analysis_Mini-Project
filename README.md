@@ -135,12 +135,16 @@ Created using Tableau:
 ---
 
 ## Machine Learning Performance
-- Model: Linear Regression  
-- Evaluation Metrics:
-  - MAE  
-  - MSE  
-  - R² Score (~0.86)  
-- Good predictive performance for sales estimation  
+
+* Model: Linear Regression
+* Evaluation Metrics:
+
+  * MAE: 473.57
+  * MSE: 395,529.94
+  * R² Score: 0.8622
+* The model demonstrated good predictive performance for estimating final sales amounts.
+
+
   
 ---
 
