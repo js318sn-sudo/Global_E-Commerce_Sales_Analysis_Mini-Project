@@ -1,6 +1,6 @@
 OrderID,CustomerID,ProductID,Quantity,Discount,Region,OrderDate,CustomerName,Age,Gender,Country,RegistrationDate,ProductName,Category,Price,CostPrice,PaymentID,PaymentMethod,PaymentStatus,AmountPaid,TotalSales,DiscountAmount,FinalAmount,Profit
-1,1,1,3,0.17,North America,2023-01-22,Customer_1,56,Male,Singapore,2024-03-13,Product_1,Home & Kitchen,413,300,1,Credit Card,Completed,1200,1239,210.63,1028.37,128.37
-2,2,2,6,0.16,Oceania,2024-11-20,Customer_2,46,Male,Germany,2022-05-11,Product_2,Books,814,500,2,PayPal,Completed,3500,4884,781.44,4102.56,1002.56
-3,3,3,9,0.05,Middle East,2024-07-13,Customer_3,32,Male,Japan,2023-05-13,Product_3,Accessories,525,200,3,UPI,Refunded,2200,4725,236.25,4488.75,2688.75
-4,4,4,3,0.21,Asia,2024-09-20,Customer_4,60,Male,USA,2022-08-17,Product_4,Sports,741,400,4,Debit Card,Completed,4100,2223,466.83,1756.17,556.17
-5,5,5,5,0.21,Europe,2023-11-25,Customer_5,25,Male,UAE,2022-04-18,Product_5,Electronics,373,250,5,Net Banking,Pending,1800,1865,391.65,1473.35,223.35
+1,1,1,3,0.17,North America,2023-01-22,Customer_1,56,Male,Singapore,2024-03-13,Product_1,Home & Kitchen,413,300,1,Credit Card,Completed,1028.37,1239,210.63,1028.37,128.37
+2,2,2,6,0.16,Oceania,2024-11-20,Customer_2,46,Male,Germany,2022-05-11,Product_2,Books,814,500,2,PayPal,Completed,4102.56,4884,781.44,4102.56,1102.56
+3,3,3,9,0.05,Middle East,2024-07-13,Customer_3,32,Male,Japan,2023-05-13,Product_3,Accessories,525,200,3,UPI,Refunded,4488.75,4725,236.25,4488.75,2688.75
+4,4,4,3,0.21,Asia,2024-09-20,Customer_4,60,Male,USA,2022-08-17,Product_4,Sports,741,400,4,Debit Card,Completed,1756.17,2223,466.83,1756.17,556.17
+5,5,5,5,0.21,Europe,2023-11-25,Customer_5,25,Male,UAE,2022-04-18,Product_5,Electronics,373,250,5,Net Banking,Pending,1473.35,1865,391.65,1473.35,223.35
