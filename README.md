@@ -122,11 +122,15 @@ Created using Tableau:
 ---
 
 ## Key Insights
-- Electronics and Beauty are top-performing categories  
-- USA and Japan generate highest revenue  
-- UPI is the most used payment method  
-- Strong relationship between price and sales  
-- Profit varies significantly across categories  
+
+- Beauty is the highest revenue-generating category, followed by Sports and Accessories.
+- Japan generated the highest revenue, followed by Germany and USA.
+- UPI contributed the highest revenue among payment methods.
+- Strong positive correlation exists between Price, Total Sales, and Final Amount.
+- Profitability varies significantly across product categories, with some categories generating negative profit.
+- Customer purchasing behavior shows that a small group of customers contributes a large share of total revenue.
+- Monthly sales remained consistent across 2023 and 2024 with revenue exceeding 10.4 million overall.
+- The Linear Regression model achieved an R² score of approximately 0.86, indicating good predictive performance.
 
 ---
 
