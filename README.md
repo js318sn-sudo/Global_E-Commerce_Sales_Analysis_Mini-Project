@@ -60,7 +60,7 @@ This dataset supports data cleaning, exploratory data analysis (EDA), feature en
 - Matplotlib
 - Seaborn  
 - Scikit-learn  
-- Power BI(Business Intelligence Dashboard)
+- Power BI (Business Intelligence Dashboard)
 - Jupyter Notebook  
 
 ---
