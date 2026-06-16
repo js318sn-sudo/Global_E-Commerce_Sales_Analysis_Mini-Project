@@ -170,4 +170,4 @@ ___
 ---
 
 ## Conclusion
-This project demonstrates a complete data analytics pipeline including data preprocessing, visualization, machine learning, and business intelligence reporting for real-world e-commerce analysis using Tableau.
+This project demonstrates a complete data analytics pipeline including data preprocessing, visualization, machine learning, and business intelligence reporting for real-world e-commerce analysis using Power BI.
