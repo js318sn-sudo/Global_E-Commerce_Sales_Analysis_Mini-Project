@@ -135,7 +135,6 @@ Created using Tableau:
 ---
 
 ## Machine Learning Performance
-
 - Model: Linear Regression
 - Evaluation Metrics:
   - MAE: 473.57
