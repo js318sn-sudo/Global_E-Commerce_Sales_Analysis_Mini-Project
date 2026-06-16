@@ -26,10 +26,6 @@ This project aims to perform a comprehensive analysis of e-commerce sales data u
 
 ---
 
-![E-Commerce Dashboard](images/Business Intelligence Dashboard.png)
-
----
-
 ## Dataset Selection  
 
 A custom E-Commerce Sales dataset was created to simulate real-world online business operations. The dataset consists of four interconnected tables: Customers, Products, Orders, and Payments.
