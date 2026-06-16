@@ -1,149 +1,112 @@
-# E-Commerce Sales Analysis and Business Intelligence Dashboard
+#  E-Commerce Sales Analysis and Business Intelligence Dashboard
 
-## Project Overview  
-This project is a complete end-to-end data analytics and machine learning solution for an e-commerce business. It includes data generation, data cleaning, exploratory data analysis, feature creation, visualization, business intelligence dashboard, and predictive modeling.
-
----
-
-## Problem Statement  
-
-The rapid growth of e-commerce businesses generates large volumes of sales, customer, product, and payment data. Analyzing this data is essential for understanding customer purchasing behavior, identifying top-performing products, tracking sales trends, evaluating profitability, and improving business decision-making.
-
-This project aims to perform a comprehensive analysis of e-commerce sales data using Python, Pandas, SQL-style analytical operations, data visualization, statistical techniques, and machine learning. The focus is on extracting meaningful insights from business data, identifying sales patterns, evaluating customer and product performance, and supporting data-driven decision-making through analytical reporting and dashboard development.
+##  Project Overview  
+This project is a complete end-to-end data analytics and machine learning solution for an e-commerce business. It includes data generation, data cleaning, exploratory data analysis, feature engineering, statistical analysis, visualization, and predictive modeling.
 
 ---
 
-## Objectives
+##  Problem Statement  
+The rapid growth of e-commerce generates large volumes of data related to customers, products, orders, and payments. This project aims to analyze this data to understand customer behavior, product performance, sales trends, profitability, and overall business performance using data analytics and machine learning techniques.
 
+---
+
+##  Objectives  
 - Customer Behavior Analysis  
 - Product Performance Analysis  
 - Sales Trend Analysis  
 - Profitability Analysis  
 - Regional Performance Analysis  
 - Payment Analysis  
-- SQL-Style Business Reporting and Analytical Operations  
-- Sales Prediction using Machine Learning  
+- SQL-style business reporting  
+- Sales prediction using Machine Learning  
 
 ---
 
-## Dataset Selection  
+##  Dataset Description  
+A synthetic e-commerce dataset was created consisting of:
 
-A custom E-Commerce Sales dataset was created to simulate real-world online business operations. The dataset consists of four interconnected tables: Customers, Products, Orders, and Payments.
+- customers.csv – Customer details  
+- products.csv – Product details  
+- orders.csv – Order transactions  
+- payments.csv – Payment information  
 
-These datasets contain customer details, product information, order transactions, sales amounts, discounts, profits, payment methods, and payment status.
-
-The data was merged and analyzed using Pandas operations such as filtering, grouping, aggregation, joins, and sorting.
-
-This dataset supports data cleaning, exploratory data analysis (EDA), feature engineering, statistical analysis, visualization, machine learning, and business intelligence reporting.
-
----
-
-## Datasets Used
-
-- customers.csv – Customer information  
-- products.csv – Product details and pricing  
-- orders.csv – Order and sales transactions  
-- payments.csv – Payment methods and status  
+These datasets were merged using CustomerID, ProductID, and OrderID for analysis.
 
 ---
 
-## Tools & Technologies
+##  Tools & Technologies Used  
 
 - Python  
 - Pandas, NumPy  
 - Matplotlib, Seaborn  
 - Scikit-learn  
-- Tableau Desktop
+- Tableau Desktop / Tableau Public  
 - Jupyter Notebook  
 
 ---
 
-## Project Workflow
-
-### 1. Data Generation
-Synthetic datasets created for:
-- Customers  
-- Products  
-- Orders  
-- Payments  
-
----
-
-### 2. Data Cleaning
-- Handled missing values  
-- Removed duplicates  
-- Converted data types  
+##  Data Processing Steps  
+- Data generation using NumPy and Pandas  
+- Data cleaning (missing values, duplicates)  
+- Data merging using multiple keys  
+- Feature engineering:
+  - TotalSales  
+  - DiscountAmount  
+  - FinalAmount  
+  - Profit  
+  - Profit Margin  
 
 ---
 
-### 3. Data Merging
-Merged datasets using:
-- CustomerID  
-- ProductID  
-- OrderID  
-
----
-
-### 4. Feature Creation
-- TotalSales  
-- DiscountAmount  
-- FinalAmount  
-- Profit  
-- Profit Margin  
-
----
-
-### 5. Exploratory Data Analysis
-- Sales distribution  
-- Category-wise analysis  
-- Country-wise performance  
+##  Exploratory Data Analysis (EDA)  
+- Sales distribution analysis  
+- Category-wise performance  
+- Country-wise revenue analysis  
 - Customer segmentation  
+- Payment method analysis  
+- Time series trend analysis  
 
 ---
 
-### 6. Machine Learning Model
-- Linear Regression model  
-- Predicts Final Sales Amount  
-- Evaluated using MAE, MSE, R² Score  
+##  Machine Learning Model  
+- Model Used: Linear Regression  
+- Target Variable: Final Sales Amount  
+- Evaluation Metrics:
+  - MAE  
+  - MSE  
+  - R² Score (~0.86)  
 
 ---
 
-### 7. Business Intelligence Dashboard
-Created using Tableau:
-- Revenue analysis  
-- Profit analysis  
-- Customer insights  
-- Product performance  
-- Time series trends  
+##  Business Intelligence Dashboard  
+
+Created using Tableau Desktop / Tableau Public:
+
+- Revenue Analysis Dashboard  
+- Profit Analysis Dashboard  
+- Customer Insights Dashboard  
+- Product Performance Dashboard  
+- Time Series Trend Dashboard  
 
 ---
 
-## Key Insights
-- Electronics and Beauty are top-performing categories  
-- USA and Japan generate highest revenue  
+##  Key Insights  
+- Beauty and Electronics are top-performing categories  
+- Japan and USA generate highest revenue  
 - UPI is the most used payment method  
-- Strong relationship between price and sales  
+- Strong correlation between price and sales  
 - Profit varies significantly across categories  
 
 ---
 
-## Machine Learning Performance
-- Model: Linear Regression  
-- R² Score: ~0.86  
-- Good predictive performance for sales estimation  
+##  Final KPIs  
+- Total Revenue: ~10.4M  
+- Total Profit: ~1.27M  
+- Total Orders: 5000  
+- Total Customers: 500  
+- Total Products: 200  
 
 ---
 
-## Final Deliverables
-- Mini-Project.ipynb  
-- Dashboard.twbx  
-- README.md  
-- customers.csv  
-- products.csv  
-- orders.csv  
-- payments.csv  
-
----
-
-## Conclusion
-This project demonstrates a complete data analytics pipeline including data preprocessing, visualization, machine learning, and business intelligence reporting for real-world e-commerce analysis using Tableau.
+##  Conclusion  
+This project demonstrates a complete data analytics pipeline including data preprocessing, exploratory data analysis, visualization, machine learning, and business intelligence using Tableau. It provides actionable insights for improving business decision-making in an e-commerce environment.
