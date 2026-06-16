@@ -40,7 +40,7 @@ These datasets were merged using CustomerID, ProductID, and OrderID for analysis
 - Pandas, NumPy  
 - Matplotlib, Seaborn  
 - Scikit-learn  
-- Tableau Desktop / Tableau Public  
+- Tableau Desktop 
 - Jupyter Notebook  
 
 ---
