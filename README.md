@@ -152,7 +152,7 @@ Created using Power BI:
 
 ## Final Deliverables
 - Mini-Project.ipynb  
-- Business Intelligence Dashboard.png
+- Business_Intelligence_Dashboard.png
 - README.md  
 - customers.csv  
 - products.csv  
