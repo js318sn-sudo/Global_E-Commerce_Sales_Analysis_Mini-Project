@@ -28,7 +28,7 @@ This project aims to perform a comprehensive analysis of e-commerce sales data u
 
 ## Business Intelligence Dashboard
 
-![Business Intelligence Dashboard](images/Business%20Intelligence%20Dashboard.png)
+![Business Intelligence Dashboard](Business%20Intelligence%20Dashboard.png)
 
 ---
 
