@@ -38,7 +38,7 @@ These datasets contain customer details, product information, order transactions
 
 The data was merged and analyzed using Pandas operations such as filtering, grouping, aggregation, joins, and sorting.
 
-This dataset supports data cleaning, exploratory data analysis (EDA), feature engineering, statistical analysis, visualization, machine learning, and business intelligence reporting.
+This dataset supports data cleaning, exploratory data analysis (EDA), feature engineering, statistical analysis, visualization, machine learning, and business intelligence reporting using Power BI.
 
 ---
 
@@ -60,7 +60,7 @@ This dataset supports data cleaning, exploratory data analysis (EDA), feature en
 - Matplotlib
 - Seaborn  
 - Scikit-learn  
-- Power BI 
+- Power BI(Business Intelligence Dashboard)
 - Jupyter Notebook  
 
 ---
