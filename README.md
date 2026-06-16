@@ -56,7 +56,7 @@ This dataset supports data cleaning, exploratory data analysis (EDA), feature en
 - Matplotlib
 - Seaborn  
 - Scikit-learn  
-- Tableau  
+- Power BI 
 - Jupyter Notebook  
 
 ---
@@ -146,7 +146,7 @@ Created using Tableau:
 
 ## Final Deliverables
 - Mini-Project.ipynb  
-- Dashboard.twbx  
+- Business Intelligence Dashboard.png
 - README.md  
 - customers.csv  
 - products.csv  
