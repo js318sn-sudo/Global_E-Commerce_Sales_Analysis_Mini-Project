@@ -116,7 +116,7 @@ Merged datasets using:
 ---
 
 ### 7. Business Intelligence Dashboard
-Created using Tableau:
+Created using Power BI:
 - Revenue analysis  
 - Profit analysis  
 - Customer insights  
