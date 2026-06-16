@@ -43,7 +43,8 @@ This dataset supports data cleaning, exploratory data analysis (EDA), feature en
 - customers.csv – Customer information  
 - products.csv – Product details and pricing  
 - orders.csv – Order and sales transactions  
-- payments.csv – Payment methods and status  
+- payments.csv – Payment methods and status
+- final_merged_dataset.csv -  Final merged dataset created by combining all four datasets using CustomerID, ProductID, and OrderID for complete analysis and modeling.
 
 ---
 
@@ -147,6 +148,7 @@ Created using Tableau:
 - products.csv  
 - orders.csv  
 - payments.csv
+- final_merged_dataset.csv
 
 ___
 
