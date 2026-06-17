@@ -105,7 +105,7 @@ Merged datasets using:
 ### 5. Exploratory Data Analysis
 - Sales distribution  
 - Category-wise analysis  
-- Country-wise performance  
+- Region-wise performance 
 - Customer segmentation  
 
 ---
@@ -163,8 +163,8 @@ Created using Power BI:
 ___
 
 ##  Final KPIs  
-- Total Revenue: ~10.4M  
-- Total Profit: ~1.27M  
+- Total Revenue: ~10.4M
+- Total Profit: ~1.28M 
 - Total Orders: 5000  
 - Total Customers: 500  
 - Total Products: 200
