@@ -145,7 +145,7 @@ Created using Power BI:
 - Evaluation Metrics:
 - MAE
 - MSE
-- R² Score (~0.86)
+- R² Score: 0.86
 - Good predictive performance for sales estimation.
 
 ---
