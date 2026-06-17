@@ -130,7 +130,7 @@ Created using Power BI:
 ## Key Insights
 
 - Beauty is the highest revenue-generating category, followed by Sports and Accessories.
-- Japan generated the highest revenue, followed by Germany and USA.
+- Asia generated the highest revenue (4.01M), followed by Europe (2.25M) and North America (2.18M).
 - UPI contributed the highest revenue among payment methods.
 - Strong positive correlation exists between Price, Total Sales, and Final Amount.
 - Profitability varies significantly across product categories, with some categories generating negative profit.
