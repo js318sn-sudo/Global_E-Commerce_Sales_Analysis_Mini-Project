@@ -86,7 +86,7 @@ Analyzing this information is essential for:
 - Optimizing sales strategies
 - Supporting data-driven business decisions
 
-This project performs comprehensive analysis using Python, SQL-style analytical operations with Pandas, statistical analysis, machine learning, and business intelligence visualization to provide meaningful business insights.
+This project performs comprehensive analysis using Python-based data analytics, Pandas operations, statistical analysis, machine learning, and business intelligence visualization to provide meaningful business insights.
 
 ---
 
@@ -392,11 +392,7 @@ Follow the steps below to explore the E-Commerce Sales Analysis Dashboard.
 
 ## Step 1: Download the Project
 
-Download or clone this repository to your local machine.
-
-```bash
-git clone https://github.com/your-username/E-Commerce-Sales-Analysis.git
-```
+Download the project files from this repository and open the project folder on your local machine.
 
 ---
 
@@ -481,6 +477,12 @@ Future improvements include:
 - Real-Time Analytics Dashboard
 
 ---
+
+# Project Status
+
+Completed
+
+___
 
 # Conclusion
 
