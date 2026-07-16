@@ -222,31 +222,50 @@ E-Commerce-Sales-Analysis/
 
 ---
 
-## Installation
+## Quick Start Guide for Installation
 
-Clone the repository:
+Follow the steps below to explore the E-Commerce Sales Analysis Dashboard.
+
+### Step 1: Download the Project
+
+Download or clone this repository to your local machine.
 
 ```bash
 git clone https://github.com/your-username/E-Commerce-Sales-Analysis.git
 ```
 
-Move into the project directory:
+### Step 2: Install the Required Libraries
 
-```bash
-cd E-Commerce-Sales-Analysis
-```
-
-Install dependencies:
+Install all project dependencies using the provided requirements file.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the Streamlit application:
+### Step 3: Launch the Dashboard
+
+Start the Streamlit application by running the following command:
 
 ```bash
 streamlit run app.py
 ```
+
+### Step 4: Explore the Dashboard
+
+Once the application starts, you can:
+
+* View interactive business KPIs
+* Analyze sales and profitability
+* Explore customer and product insights
+* Visualize regional and payment trends
+* Predict Final Sales Amount using Machine Learning
+* Download filtered datasets for further analysis
+
+### Online Demo
+
+The project is also available as a live web application:
+
+**https://globale-commercesalesanalysismini-project-tdfhfdcjnh5zyoncykzr.streamlit.app/**
 
 ---
 
