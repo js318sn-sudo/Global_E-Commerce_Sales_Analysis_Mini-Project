@@ -293,6 +293,7 @@ FinalAmount
 **R² Score: 0.86**
 
 The model demonstrates good predictive performance for estimating Final Sales Amount.
+
 ---
 
 # Dashboard Features
