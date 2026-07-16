@@ -1,175 +1,277 @@
-#  E-Commerce Sales Analysis and Business Intelligence Dashboard
+# E-Commerce Sales Analysis & Business Intelligence Dashboard
 
-## Project Overview  
-This project is a complete end-to-end data analytics and machine learning solution for an e-commerce business. It includes data generation, data cleaning, exploratory data analysis, feature creation, visualization, business intelligence dashboard, and predictive modeling.
+## Project Overview
 
----
+The **E-Commerce Sales Analysis & Business Intelligence Dashboard** is a complete end-to-end Data Analytics and Machine Learning project developed using **Python, Streamlit, Pandas, NumPy, Plotly, Scikit-learn, and Power BI**.
 
-## Problem Statement  
+This project demonstrates the complete analytics lifecycle, including data generation, data preprocessing, exploratory data analysis (EDA), feature engineering, statistical analysis, interactive visualization, machine learning, dashboard development, and web application deployment.
 
-The rapid growth of e-commerce businesses generates large volumes of sales, customer, product, and payment data. Analyzing this data is essential for understanding customer purchasing behavior, identifying top-performing products, tracking sales trends, evaluating profitability, and improving business decision-making.
-
-This project aims to perform a comprehensive analysis of e-commerce sales data using Python, Pandas, SQL-style analytical operations, data visualization, statistical techniques, and machine learning. The focus is on extracting meaningful insights from business data, identifying sales patterns, evaluating customer and product performance, and supporting data-driven decision-making through analytical reporting and dashboard development.
+The interactive Streamlit application enables users to analyze customer behavior, product performance, regional sales, profitability, payment trends, and sales forecasting through an intuitive Business Intelligence dashboard.
 
 ---
 
-## Objectives
+## Problem Statement
 
-- Customer Behavior Analysis  
-- Product Performance Analysis  
-- Sales Trend Analysis  
-- Profitability Analysis  
-- Regional Performance Analysis  
-- Payment Analysis  
-- SQL-Style Business Reporting and Analytical Operations  
-- Sales Prediction using Machine Learning  
+Modern e-commerce businesses generate massive volumes of customer, product, order, and payment data every day. Analyzing this information is essential for identifying business trends, understanding customer purchasing behavior, improving profitability, optimizing product performance, and supporting strategic business decisions.
+
+This project performs comprehensive analysis using Python, SQL-style analytical operations with Pandas, statistical analysis, machine learning, and business intelligence visualization to provide meaningful insights for data-driven decision-making.
+
+---
+
+## Project Objectives
+
+* Customer Behavior Analysis
+* Product Performance Analysis
+* Sales Trend Analysis
+* Profitability Analysis
+* Regional Performance Analysis
+* Payment Method Analysis
+* SQL-Style Business Reporting
+* Interactive Business Intelligence Dashboard
+* Sales Prediction using Machine Learning
+
+---
+
+## Live Streamlit Application
+
+### Streamlit Deployment
+
+https://globale-commercesalesanalysismini-project-tdfhfdcjnh5zyoncykzr.streamlit.app/
+
+Explore the application to:
+
+* View Business KPIs
+* Analyze Customer Performance
+* Analyze Product Performance
+* Analyze Regional Sales
+* Analyze Payment Methods
+* Explore Sales Trends
+* Predict Final Sales Amount using Machine Learning
+* Download Filtered Dataset
 
 ---
 
 ## Business Intelligence Dashboard
 
-![Business Intelligence Dashboard](Business_Intelligence_Dashboard.png)
+![Business Intelligence Dashboard](Business_Intelligence_Dashboard.png) 
 
 ---
 
-## Dataset Selection  
+## Dataset Description
 
-A custom E-Commerce Sales dataset was created to simulate real-world online business operations. The dataset consists of four interconnected tables: Customers, Products, Orders, and Payments.
+A custom synthetic E-Commerce Sales dataset was created to simulate real-world online business operations.
 
-These datasets contain customer details, product information, order transactions, sales amounts, discounts, profits, payment methods, and payment status.
+The project contains five datasets:
 
-The data was merged and analyzed using Pandas operations such as filtering, grouping, aggregation, joins, and sorting.
+* customers.csv
+* products.csv
+* orders.csv
+* payments.csv
+* final_merged_dataset.csv
 
-This dataset supports data cleaning, exploratory data analysis (EDA), feature engineering, statistical analysis, visualization, machine learning, and business intelligence reporting using Power BI.
-
----
-
-## Datasets Used
-
-- customers.csv – Customer information  
-- products.csv – Product details and pricing  
-- orders.csv – Order and sales transactions  
-- payments.csv – Payment methods and status
-- final_merged_dataset.csv -  Final merged dataset created by combining all four datasets using CustomerID, ProductID, and OrderID for complete analysis and modeling.
-
----
-
-## Tools & Technologies
-
-- Python  
-- Pandas
-- NumPy  
-- Matplotlib
-- Seaborn  
-- Scikit-learn  
-- Power BI (Business Intelligence Dashboard)
-- Jupyter Notebook  
+The final merged dataset combines customer information, product details, sales transactions, payment information, discounts, revenue, and profitability for complete business analysis.
 
 ---
 
 ## Project Workflow
 
-### 1. Data Generation
-Synthetic datasets created for:
-- Customers  
-- Products  
-- Orders  
-- Payments  
+1. Data Generation
+2. Data Cleaning
+3. Data Merging
+4. Feature Engineering
+5. Exploratory Data Analysis (EDA)
+6. Statistical Analysis
+7. Data Visualization
+8. Machine Learning
+9. Streamlit Dashboard Development
+10. Business Intelligence Dashboard
+11. Streamlit Deployment
 
 ---
 
-### 2. Data Cleaning
-- Handled missing values  
-- Removed duplicates  
-- Converted data types  
+## Feature Engineering
+
+The following business features were created:
+
+* TotalSales
+* DiscountAmount
+* FinalAmount
+* Profit
+* Profit Margin
 
 ---
 
-### 3. Data Merging
-Merged datasets using:
-- CustomerID  
-- ProductID  
-- OrderID  
+## Exploratory Data Analysis
+
+The project includes:
+
+* Sales Trend Analysis
+* Category-wise Revenue Analysis
+* Product Performance Analysis
+* Customer Behavior Analysis
+* Regional Performance Analysis
+* Payment Method Analysis
+* Profit Analysis
+* Correlation Analysis
 
 ---
 
-### 4. Feature Creation
-- TotalSales  
-- DiscountAmount  
-- FinalAmount  
-- Profit  
-- Profit Margin  
+## Machine Learning
+
+### Model
+
+* Linear Regression
+
+### Input Features
+
+* Quantity
+* Price
+* CostPrice
+* Discount
+
+### Target Variable
+
+* FinalAmount
+
+### Evaluation Metrics
+
+* Mean Absolute Error (MAE)
+* Mean Squared Error (MSE)
+* R² Score
+
+### Model Performance
+
+* R² Score: **0.86**
+
+The model demonstrates good predictive performance for estimating the Final Sales Amount.
 
 ---
 
-### 5. Exploratory Data Analysis
-- Sales distribution  
-- Category-wise analysis  
-- Region-wise performance 
-- Customer segmentation  
+## Dashboard Features
+
+* Interactive KPI Dashboard
+* Revenue Analysis
+* Profit Analysis
+* Customer Insights
+* Product Performance
+* Regional Sales Analysis
+* Payment Analysis
+* Correlation Heatmap
+* Machine Learning Prediction
+* Dataset Explorer
+* Download Filtered Dataset
 
 ---
 
-### 6. Machine Learning Model
-- Linear Regression model  
-- Predicts Final Sales Amount  
-- Evaluated using MAE, MSE, R² Score  
+## Tools & Technologies
+
+* Python
+* Pandas
+* NumPy
+* Plotly
+* Streamlit
+* Scikit-learn
+* Power BI
+* Jupyter Notebook
+* Git
+* GitHub
 
 ---
 
-### 7. Business Intelligence Dashboard
-Created using Power BI:
-- Revenue analysis  
-- Profit analysis  
-- Customer insights  
-- Product performance  
-- Time series trends  
+## Project Structure
+
+```text
+E-Commerce-Sales-Analysis/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── Mini-Project.ipynb
+├── customers.csv
+├── products.csv
+├── orders.csv
+├── payments.csv
+├── final_merged_dataset.csv
+└── Business_Intelligence_Dashboard.png
+```
 
 ---
 
-## Key Insights
+## Installation
 
-- Beauty is the highest revenue-generating category, followed by Sports and Accessories.
-- Asia generated the highest revenue (4.01M), followed by Europe (2.25M) and North America (2.18M).
-- UPI contributed the highest revenue among payment methods.
-- Strong positive correlation exists between Price, Total Sales, and Final Amount.
-- Profitability varies significantly across product categories, with some categories generating negative profit.
-- Customer purchasing behavior shows that a small group of customers contributes a large share of total revenue.
-- Monthly sales remained consistent across 2023 and 2024 with revenue exceeding 10.4 million overall.
-- The Linear Regression model achieved an R² score of approximately 0.86, indicating good predictive performance.
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/E-Commerce-Sales-Analysis.git
+```
+
+Move into the project directory:
+
+```bash
+cd E-Commerce-Sales-Analysis
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
 
 ---
 
-## Machine Learning Performance
-- Model: Linear Regression
-- Evaluation Metrics:
-- MAE
-- MSE
-- R² Score: 0.86
-- Good predictive performance for sales estimation.
+## Streamlit Deployment
+
+**Live Application**
+
+https://globale-commercesalesanalysismini-project-tdfhfdcjnh5zyoncykzr.streamlit.app/
 
 ---
 
-## Final Deliverables
-- Mini-Project.ipynb  
-- Business_Intelligence_Dashboard.png
-- README.md  
-- customers.csv  
-- products.csv  
-- orders.csv  
-- payments.csv
-- final_merged_dataset.csv
+## Key Business Insights
 
-___
+* Beauty generated the highest revenue among all product categories.
+* Asia generated the highest overall revenue, followed by Europe and North America.
+* UPI contributed the highest revenue among payment methods.
+* Strong positive correlation exists between Price, Total Sales, and Final Amount.
+* A small group of customers contributed a significant share of total revenue.
+* Monthly sales remained consistent throughout 2023 and 2024.
+* The Linear Regression model achieved an R² Score of approximately **0.86**.
 
-##  Final KPIs  
-- Total Revenue: 10.41M
-- Total Profit: 1.28M 
-- Total Orders: 5000  
-- Total Customers: 500  
-- Total Products: 200
-  
+---
+
+## Final KPIs
+
+| KPI             |      Value |
+| --------------- | ---------: |
+| Total Revenue   | **10.41M** |
+| Total Profit    |  **1.28M** |
+| Total Orders    |  **5,000** |
+| Total Customers |    **500** |
+| Total Products  |    **200** |
+
+---
+
+## Future Enhancements
+
+* Real-time Database Integration
+* Cloud Deployment
+* User Authentication
+* Customer Recommendation System
+* Advanced Machine Learning Models
+* AI-Based Sales Forecasting
+* Interactive Business Reports
+
 ---
 
 ## Conclusion
-This project demonstrates a complete data analytics pipeline including data preprocessing, visualization, machine learning, and business intelligence reporting for real-world e-commerce analysis using Power BI.
+
+This project demonstrates a complete Business Intelligence and Data Analytics solution for E-Commerce Sales Analysis using **Python, Streamlit, Plotly, Scikit-learn, and Power BI**.
+
+The project integrates data preprocessing, exploratory data analysis, feature engineering, interactive visualization, predictive analytics, and dashboard development into a single web application. It provides meaningful business insights and supports data-driven decision-making while showcasing practical implementation of modern data analytics and business intelligence techniques.
+
