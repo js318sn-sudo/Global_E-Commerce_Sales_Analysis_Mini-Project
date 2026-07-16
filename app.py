@@ -30,22 +30,22 @@ st.markdown("""
 <style>
 
 .main{
-    background-color:#F7F9FC;
+    background:#F8F9FA;
 }
 
-h1,h2,h3{
-    color:#003366;
+h1,h2,h3,h4{
+    color:#0A3D62;
 }
 
 div[data-testid="metric-container"]{
     background:white;
     border-radius:12px;
     padding:18px;
-    box-shadow:0px 3px 8px rgba(0,0,0,0.15);
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
 
 section[data-testid="stSidebar"]{
-    background:#F1F3F6;
+    background:#EEF2F7;
 }
 
 </style>
@@ -58,9 +58,9 @@ section[data-testid="stSidebar"]{
 st.title("🛒 E-Commerce Sales Analysis & Business Intelligence Dashboard")
 
 st.write("""
-This dashboard provides interactive business insights using
-Python, Streamlit, Plotly, Machine Learning and Business
-Intelligence techniques.
+Interactive dashboard for analyzing customer behavior,
+product performance, regional sales, profitability,
+payment methods, and sales prediction.
 """)
 
 # ----------------------------------------------------------
@@ -80,23 +80,16 @@ def load_data():
 df = load_data()
 
 # ----------------------------------------------------------
-# MACHINE LEARNING MODEL
+# TRAIN MACHINE LEARNING MODEL
 # ----------------------------------------------------------
 
-X = df[
-    [
-        "Quantity",
-        "Price",
-        "CostPrice",
-        "Discount"
-    ]
-]
+X = df[["Quantity","Price","CostPrice","Discount"]]
 
 y = df["FinalAmount"]
 
 model = LinearRegression()
 
-model.fit(X, y)
+model.fit(X,y)
 
 # ----------------------------------------------------------
 # SIDEBAR FILTERS
@@ -104,10 +97,10 @@ model.fit(X, y)
 
 st.sidebar.header("Dashboard Filters")
 
-country = st.sidebar.multiselect(
-    "Country",
-    sorted(df["Country"].unique()),
-    default=sorted(df["Country"].unique())
+region = st.sidebar.multiselect(
+    "Region",
+    sorted(df["Region"].unique()),
+    default=sorted(df["Region"].unique())
 )
 
 category = st.sidebar.multiselect(
@@ -123,13 +116,16 @@ payment = st.sidebar.multiselect(
 )
 
 filtered_df = df[
-    (df["Country"].isin(country)) &
+    (df["Region"].isin(region)) &
     (df["Category"].isin(category)) &
     (df["PaymentMethod"].isin(payment))
 ]
 
 st.sidebar.markdown("---")
-st.sidebar.success(f"Records : {len(filtered_df)}")
+
+st.sidebar.success(
+    f"Filtered Records : {len(filtered_df)}"
+)
 # ----------------------------------------------------------
 # KPI CALCULATIONS
 # ----------------------------------------------------------
@@ -141,37 +137,42 @@ total_customers = filtered_df["CustomerID"].nunique()
 total_products = filtered_df["ProductID"].nunique()
 
 # ----------------------------------------------------------
-# KPI SECTION
+# KPI DASHBOARD
 # ----------------------------------------------------------
 
 st.subheader("📊 Business Overview")
 
-col1, col2, col3, col4, col5 = st.columns(5)
+kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
 
-col1.metric(
-    "💰 Total Revenue",
-    f"${total_revenue:,.2f}"
-)
+with kpi1:
+    st.metric(
+        "💰 Revenue",
+        f"${total_revenue:,.2f}"
+    )
 
-col2.metric(
-    "📈 Total Profit",
-    f"${total_profit:,.2f}"
-)
+with kpi2:
+    st.metric(
+        "📈 Profit",
+        f"${total_profit:,.2f}"
+    )
 
-col3.metric(
-    "🛍 Orders",
-    total_orders
-)
+with kpi3:
+    st.metric(
+        "🛒 Orders",
+        total_orders
+    )
 
-col4.metric(
-    "👥 Customers",
-    total_customers
-)
+with kpi4:
+    st.metric(
+        "👥 Customers",
+        total_customers
+    )
 
-col5.metric(
-    "📦 Products",
-    total_products
-)
+with kpi5:
+    st.metric(
+        "📦 Products",
+        total_products
+    )
 
 st.markdown("---")
 
@@ -198,9 +199,9 @@ fig_month = px.line(
 )
 
 fig_month.update_layout(
+    template="plotly_white",
     xaxis_title="Month",
-    yaxis_title="Revenue",
-    template="plotly_white"
+    yaxis_title="Revenue"
 )
 
 st.plotly_chart(
@@ -209,7 +210,7 @@ st.plotly_chart(
 )
 
 # ----------------------------------------------------------
-# CATEGORY SALES
+# REVENUE BY CATEGORY
 # ----------------------------------------------------------
 
 category_sales = (
@@ -239,32 +240,62 @@ st.plotly_chart(
 )
 
 # ----------------------------------------------------------
-# COUNTRY SALES
+# REGION-WISE REVENUE
 # ----------------------------------------------------------
 
-country_sales = (
+region_sales = (
     filtered_df
-    .groupby("Country")["FinalAmount"]
+    .groupby("Region")["FinalAmount"]
     .sum()
     .sort_values(ascending=False)
     .reset_index()
 )
 
-fig_country = px.bar(
-    country_sales,
-    x="Country",
+fig_region = px.bar(
+    region_sales,
+    x="Region",
     y="FinalAmount",
     color="FinalAmount",
     text_auto=".2s",
-    title="Country-wise Revenue"
+    title="Region-wise Revenue"
 )
 
-fig_country.update_layout(
+fig_region.update_layout(
     template="plotly_white"
 )
 
 st.plotly_chart(
-    fig_country,
+    fig_region,
+    use_container_width=True
+)
+
+# ----------------------------------------------------------
+# PROFIT BY CATEGORY
+# ----------------------------------------------------------
+
+profit_category = (
+    filtered_df
+    .groupby("Category")["Profit"]
+    .sum()
+    .sort_values(ascending=False)
+    .reset_index()
+)
+
+fig_profit = px.bar(
+    profit_category,
+    x="Category",
+    y="Profit",
+    color="Profit",
+    text_auto=".2s",
+    title="Profit by Category"
+)
+
+fig_profit.update_layout(
+    template="plotly_white"
+)
+
+st.plotly_chart(
+    fig_profit,
     use_container_width=True
 )
 # ----------------------------------------------------------
@@ -272,7 +303,7 @@ st.plotly_chart(
 # ----------------------------------------------------------
 
 st.markdown("---")
-st.subheader("👥 Top Customers")
+st.subheader("👥 Top 10 Customers")
 
 top_customers = (
     filtered_df.groupby("CustomerName")["FinalAmount"]
@@ -303,7 +334,8 @@ st.plotly_chart(fig_customer, use_container_width=True)
 # TOP 10 PRODUCTS
 # ----------------------------------------------------------
 
-st.subheader("📦 Top Products")
+st.markdown("---")
+st.subheader("📦 Top 10 Products")
 
 top_products = (
     filtered_df.groupby("ProductName")["FinalAmount"]
@@ -337,14 +369,14 @@ st.plotly_chart(fig_product, use_container_width=True)
 st.markdown("---")
 st.subheader("💳 Payment Method Analysis")
 
-payment_analysis = (
+payment_sales = (
     filtered_df.groupby("PaymentMethod")["FinalAmount"]
     .sum()
     .reset_index()
 )
 
 fig_payment = px.pie(
-    payment_analysis,
+    payment_sales,
     names="PaymentMethod",
     values="FinalAmount",
     hole=0.45,
@@ -354,56 +386,56 @@ fig_payment = px.pie(
 st.plotly_chart(fig_payment, use_container_width=True)
 
 # ----------------------------------------------------------
-# REGION ANALYSIS
+# PAYMENT STATUS ANALYSIS
 # ----------------------------------------------------------
 
-st.subheader("🌍 Region-wise Revenue")
-
-region_sales = (
-    filtered_df.groupby("Region")["FinalAmount"]
-    .sum()
+payment_status = (
+    filtered_df.groupby("PaymentStatus")["OrderID"]
+    .count()
     .reset_index()
 )
 
-fig_region = px.treemap(
-    region_sales,
-    path=["Region"],
-    values="FinalAmount",
-    color="FinalAmount",
-    title="Regional Revenue Distribution"
-)
-
-st.plotly_chart(fig_region, use_container_width=True)
-
-# ----------------------------------------------------------
-# REVENUE CATEGORY DISTRIBUTION
-# ----------------------------------------------------------
-
-st.subheader("📊 Revenue Category")
-
-revenue_category = (
-    filtered_df["RevenueCategory"]
-    .value_counts()
-    .reset_index()
-)
-
-revenue_category.columns = [
-    "RevenueCategory",
-    "Count"
+payment_status.columns = [
+    "PaymentStatus",
+    "Orders"
 ]
 
-fig_revenue = px.bar(
-    revenue_category,
-    x="RevenueCategory",
-    y="Count",
-    color="RevenueCategory",
+fig_status = px.bar(
+    payment_status,
+    x="PaymentStatus",
+    y="Orders",
+    color="PaymentStatus",
     text_auto=True,
-    title="Revenue Category Distribution"
+    title="Payment Status Distribution"
 )
 
-fig_revenue.update_layout(template="plotly_white")
+fig_status.update_layout(template="plotly_white")
 
-st.plotly_chart(fig_revenue, use_container_width=True)
+st.plotly_chart(fig_status, use_container_width=True)
+
+# ----------------------------------------------------------
+# COUNTRY-WISE SALES
+# ----------------------------------------------------------
+
+country_sales = (
+    filtered_df.groupby("Country")["FinalAmount"]
+    .sum()
+    .sort_values(ascending=False)
+    .reset_index()
+)
+
+fig_country = px.bar(
+    country_sales,
+    x="Country",
+    y="FinalAmount",
+    color="FinalAmount",
+    text_auto=".2s",
+    title="Country-wise Revenue"
+)
+
+fig_country.update_layout(template="plotly_white")
+
+st.plotly_chart(fig_country, use_container_width=True)
 
 # ----------------------------------------------------------
 # CORRELATION HEATMAP
@@ -412,23 +444,23 @@ st.plotly_chart(fig_revenue, use_container_width=True)
 st.markdown("---")
 st.subheader("🔥 Correlation Heatmap")
 
-correlation = filtered_df[
+corr = filtered_df[
     [
         "Quantity",
         "Price",
         "CostPrice",
         "Discount",
         "TotalSales",
-        "Profit",
-        "FinalAmount"
+        "FinalAmount",
+        "Profit"
     ]
 ].corr()
 
 fig_heatmap = px.imshow(
-    correlation,
+    corr,
     text_auto=True,
     color_continuous_scale="RdBu_r",
-    title="Feature Correlation Matrix"
+    title="Correlation Matrix"
 )
 
 st.plotly_chart(fig_heatmap, use_container_width=True)
@@ -439,7 +471,7 @@ st.plotly_chart(fig_heatmap, use_container_width=True)
 st.markdown("---")
 st.header("🤖 Sales Prediction")
 
-st.write("Enter the values below to predict the Final Sales Amount.")
+st.write("Enter product details to predict the Final Sales Amount.")
 
 col1, col2 = st.columns(2)
 
@@ -453,7 +485,7 @@ with col1:
     )
 
     price = st.number_input(
-        "Price",
+        "Price ($)",
         min_value=1.0,
         value=500.0
     )
@@ -461,29 +493,24 @@ with col1:
 with col2:
 
     cost_price = st.number_input(
-        "Cost Price",
+        "Cost Price ($)",
         min_value=1.0,
         value=300.0
     )
 
     discount = st.slider(
         "Discount",
-        0.0,
-        0.50,
-        0.10,
-        0.01
+        min_value=0.00,
+        max_value=0.50,
+        value=0.10,
+        step=0.01
     )
 
-if st.button("Predict Sales"):
+if st.button("Predict Sales Amount"):
 
-    input_data = np.array([
-        [
-            quantity,
-            price,
-            cost_price,
-            discount
-        ]
-    ])
+    input_data = np.array(
+        [[quantity, price, cost_price, discount]]
+    )
 
     prediction = model.predict(input_data)
 
@@ -499,10 +526,10 @@ st.markdown("---")
 st.header("📋 Dataset Explorer")
 
 rows = st.slider(
-    "Number of Rows",
-    5,
-    100,
-    10
+    "Select Number of Rows",
+    min_value=5,
+    max_value=100,
+    value=10
 )
 
 st.dataframe(
@@ -515,7 +542,7 @@ st.dataframe(
 # ----------------------------------------------------------
 
 st.markdown("---")
-st.header("📈 Summary Statistics")
+st.header("📈 Statistical Summary")
 
 st.dataframe(
     filtered_df.describe(),
@@ -548,61 +575,56 @@ highest_category = (
     .idxmax()
 )
 
+highest_region = (
+    filtered_df.groupby("Region")["FinalAmount"]
+    .sum()
+    .idxmax()
+)
+
 highest_country = (
     filtered_df.groupby("Country")["FinalAmount"]
     .sum()
     .idxmax()
 )
 
-highest_customer = (
-    filtered_df.groupby("CustomerName")["FinalAmount"]
-    .sum()
-    .idxmax()
-)
-
-highest_product = (
+best_product = (
     filtered_df.groupby("ProductName")["FinalAmount"]
     .sum()
     .idxmax()
 )
 
-highest_payment = (
-    filtered_df.groupby("PaymentMethod")["FinalAmount"]
+best_customer = (
+    filtered_df.groupby("CustomerName")["FinalAmount"]
     .sum()
     .idxmax()
 )
 
 st.info(f"""
+📌 Highest Revenue Category : **{highest_category}**
 
-Highest Revenue Category : **{highest_category}**
+🌍 Highest Revenue Region : **{highest_region}**
 
-Highest Revenue Country : **{highest_country}**
+🏆 Highest Revenue Country : **{highest_country}**
 
-Best Customer : **{highest_customer}**
+📦 Best Selling Product : **{best_product}**
 
-Best Selling Product : **{highest_product}**
-
-Most Preferred Payment Method : **{highest_payment}**
-
+👤 Top Customer : **{best_customer}**
 """)
 
 # ----------------------------------------------------------
-# DATA INFORMATION
+# DATASET INFORMATION
 # ----------------------------------------------------------
 
 st.markdown("---")
 st.header("🗂 Dataset Information")
 
-info = pd.DataFrame({
-
-    "Column Name": filtered_df.columns,
-
+info_df = pd.DataFrame({
+    "Column": filtered_df.columns,
     "Data Type": filtered_df.dtypes.astype(str)
-
 })
 
 st.dataframe(
-    info,
+    info_df,
     use_container_width=True
 )
 # ----------------------------------------------------------
@@ -613,13 +635,14 @@ st.markdown("---")
 st.header("📖 About Project")
 
 st.write("""
-This E-Commerce Sales Analysis and Business Intelligence Dashboard
-demonstrates a complete data analytics workflow using Python,
-Pandas, Plotly, Streamlit, Scikit-learn, and Power BI concepts.
+The E-Commerce Sales Analysis and Business Intelligence Dashboard
+is a complete end-to-end data analytics project developed using
+Python, Streamlit, Pandas, Plotly, Scikit-learn and Power BI.
 
-The project analyzes customer behavior, product performance,
-sales trends, payment analysis, profitability, and predicts
-future sales using a Linear Regression model.
+The application enables users to analyze sales performance,
+customer behavior, product performance, regional revenue,
+payment trends and profitability through interactive
+visualizations and business intelligence techniques.
 """)
 
 # ----------------------------------------------------------
@@ -636,12 +659,12 @@ objectives = [
     "Profitability Analysis",
     "Regional Performance Analysis",
     "Payment Method Analysis",
-    "Machine Learning Prediction",
-    "Business Intelligence Dashboard"
+    "Business Intelligence Dashboard",
+    "Sales Prediction using Machine Learning"
 ]
 
-for obj in objectives:
-    st.write(f"✅ {obj}")
+for objective in objectives:
+    st.write(f"✔ {objective}")
 
 # ----------------------------------------------------------
 # TOOLS & TECHNOLOGIES
@@ -651,8 +674,7 @@ st.markdown("---")
 st.header("🛠 Tools & Technologies")
 
 tools = pd.DataFrame({
-
-    "Technology":[
+    "Technology": [
         "Python",
         "Pandas",
         "NumPy",
@@ -662,7 +684,6 @@ tools = pd.DataFrame({
         "Power BI",
         "Jupyter Notebook"
     ]
-
 })
 
 st.dataframe(
@@ -678,57 +699,56 @@ st.dataframe(
 st.markdown("---")
 st.header("📊 Dashboard Summary")
 
-c1, c2, c3, c4, c5 = st.columns(5)
+col1, col2, col3 = st.columns(3)
 
-with c1:
-    st.metric(
-        "Revenue",
-        f"${total_revenue:,.2f}"
-    )
+with col1:
+    st.metric("Total Revenue", f"${total_revenue:,.2f}")
 
-with c2:
-    st.metric(
-        "Profit",
-        f"${total_profit:,.2f}"
-    )
+with col2:
+    st.metric("Total Profit", f"${total_profit:,.2f}")
 
-with c3:
-    st.metric(
-        "Orders",
-        total_orders
-    )
+with col3:
+    st.metric("Total Orders", total_orders)
 
-with c4:
-    st.metric(
-        "Customers",
-        total_customers
-    )
+col4, col5 = st.columns(2)
 
-with c5:
-    st.metric(
-        "Products",
-        total_products
-    )
+with col4:
+    st.metric("Total Customers", total_customers)
+
+with col5:
+    st.metric("Total Products", total_products)
 
 # ----------------------------------------------------------
-# PROJECT CONCLUSION
+# CONCLUSION
 # ----------------------------------------------------------
 
 st.markdown("---")
 st.header("📝 Conclusion")
 
 st.success("""
-The dashboard provides a comprehensive overview of business
-performance through interactive visualizations and predictive
-analytics.
+This dashboard demonstrates a complete Business Intelligence
+solution for E-Commerce Sales Analysis.
 
-It enables decision-makers to monitor sales, evaluate customer
-behavior, identify high-performing products, analyze payment
-methods, understand profitability, and forecast future sales
-using machine learning.
+Key capabilities include:
 
-This project demonstrates a complete end-to-end Business
-Intelligence and Data Analytics solution.
+• Interactive KPI Dashboard
+
+• Customer Analysis
+
+• Product Performance Analysis
+
+• Sales Trend Analysis
+
+• Profitability Analysis
+
+• Regional Sales Analysis
+
+• Payment Analysis
+
+• Machine Learning Sales Prediction
+
+The dashboard supports data-driven decision-making through
+interactive visualizations and predictive analytics.
 """)
 
 # ----------------------------------------------------------
@@ -745,7 +765,7 @@ st.markdown(
 
 Built using
 
-<b>Python | Streamlit | Plotly | Pandas | Scikit-learn | Power BI</b>
+<b>Python | Streamlit | Pandas | Plotly | Scikit-learn | Power BI</b>
 
 <br><br>
 
