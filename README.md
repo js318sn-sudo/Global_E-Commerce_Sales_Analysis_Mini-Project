@@ -225,14 +225,6 @@ streamlit run app.py
 
 ---
 
-## Streamlit Deployment
-
-**Live Application**
-
-https://globale-commercesalesanalysismini-project-tdfhfdcjnh5zyoncykzr.streamlit.app/
-
----
-
 ## Key Business Insights
 
 * Beauty generated the highest revenue among all product categories.
