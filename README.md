@@ -1,5 +1,9 @@
 # E-Commerce Sales Analysis & Business Intelligence Dashboard
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://globale-commercesalesanalysismini-project-tdfhfdcjnh5zyoncykzr.streamlit.app/)
+
+An end-to-end Data Analytics, Machine Learning, and Business Intelligence project built using Python, Streamlit, Plotly, Scikit-learn, and Power BI.
+
 ## Project Overview
 
 The **E-Commerce Sales Analysis & Business Intelligence Dashboard** is a complete end-to-end Data Analytics and Machine Learning project developed using **Python, Streamlit, Pandas, NumPy, Plotly, Scikit-learn, and Power BI**.
@@ -9,6 +13,27 @@ This project demonstrates the complete analytics lifecycle, including data gener
 The interactive Streamlit application enables users to analyze customer behavior, product performance, regional sales, profitability, payment trends, and sales forecasting through an intuitive Business Intelligence dashboard.
 
 ---
+
+## Table of Contents
+
+- Project Overview
+- Problem Statement
+- Project Objectives
+- Live Streamlit Application
+- Business Intelligence Dashboard
+- Dataset Description
+- Project Workflow
+- Feature Engineering
+- Exploratory Data Analysis
+- Machine Learning
+- Dashboard Features
+- Tools & Technologies
+- Project Structure
+- Installation
+- Key Business Insights
+- Final KPIs
+- Future Enhancements
+- Conclusion
 
 ## Problem Statement
 
@@ -34,20 +59,20 @@ This project performs comprehensive analysis using Python, SQL-style analytical 
 
 ## Live Streamlit Application
 
-### Streamlit Deployment
+**Launch the Interactive Dashboard**
 
 https://globale-commercesalesanalysismini-project-tdfhfdcjnh5zyoncykzr.streamlit.app/
 
-Explore the application to:
+The deployed Streamlit application allows users to:
 
-* View Business KPIs
-* Analyze Customer Performance
-* Analyze Product Performance
-* Analyze Regional Sales
-* Analyze Payment Methods
-* Explore Sales Trends
-* Predict Final Sales Amount using Machine Learning
-* Download Filtered Dataset
+- View Business KPIs
+- Analyze Customer Behavior
+- Analyze Product Performance
+- Explore Regional Sales
+- Monitor Payment Methods
+- Visualize Monthly Sales Trends
+- Predict Final Sales Amount using Machine Learning
+- Download Filtered Data
 
 ---
 
