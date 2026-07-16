@@ -483,7 +483,7 @@ Future improvements include:
 
 Completed
 
-___
+---
 
 # Conclusion
 
